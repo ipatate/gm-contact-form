@@ -60,14 +60,14 @@ document.addEventListener('DOMContentLoaded', function () {
       'invalid',
       (event) => {
         console.log(input)
-        input.classList.add('error')
+        input.classList.add('gm-error')
       },
       false,
     )
     input.addEventListener(
       'valid',
       (event) => {
-        input.classList.remove('error')
+        input.classList.remove('gm-error')
       },
       false,
     )
@@ -81,7 +81,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // input filled
     if (
       form.email.value !== '' &&
-      form.name.value !== '' &&
+      form.lastname.value !== '' &&
+      form.firstname.value !== '' &&
+      form.phone.value !== '' &&
+      form.zipcode.value !== '' &&
+      form.city.value !== '' &&
       form.message.value !== '' &&
       isEmail(form.email.value)
     ) {

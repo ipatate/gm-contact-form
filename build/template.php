@@ -5,9 +5,9 @@
 <div class="gm-contact-form">
   <form action="#" id="gm-contact-form">
     <input type="hidden" name="token" value="" />
-    <div class="gm-form-line">
+    <div class="gm-form-line gm-form-line-radio">
       <label for="wm" class="gm-form-radio"><input type="radio" name="title" id="wm" value="Ms"><span><?php echo __("Ms", "gm-contact-form") ?></span></label>
-      <label for="mn" class="gm-form-radio"><input type="radio" name="title" id="mn" value="M"><span><?php echo __("M", "gm-contact-form") ?></span></label>
+      <label for="mn" class="gm-form-radio"><input type="radio" name="title" id="mn" value="M" checked><span><?php echo __("M", "gm-contact-form") ?></span></label>
     </div>
     <div class="gm-form-line">
       <label for="firstname">
@@ -60,7 +60,9 @@
     <label for="beer" class="inline-field beer-field"><?php echo __("Don't check this box, it's for robot", "gm-contact-form") ?>
       <input type="checkbox" name="beer" id="beer" />
     </label>
-    <input type="submit" class="wp-block-button__link wp-element-button" id="gm-contact-form-submit" value="<?php echo  __(" Send", "gm-contact-form") ?> " />
+    <div class="gm-form-line gm-form-line-button">
+      <input type="submit" class="wp-block-button__link wp-element-button" id="gm-contact-form-submit" value="<?php echo  __(" Send", "gm-contact-form") ?> " />
+    </div>
     <div class="gm-form-line"><br />* <?php echo __('field required', "gm-contact-form"); ?></div>
     <div id="gm-contact-form-status" class="gm-contact-form-status gm-contact-form-status-hidden">
       <div id="gm-contact-form-success" class="gm-contact-form-success gm-contact-form-modal gm-contact-form-modal-hidden">

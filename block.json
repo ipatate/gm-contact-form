@@ -2,7 +2,7 @@
   "apiVersion": 2,
   "name": "goodmotion/block-gm-contact-form",
   "title": "GM Contact Form",
-  "category": "goodmotion-blocks",
+  "category": "theme",
   "icon": "columns",
   "description": "Block for display contact form",
   "supports": {

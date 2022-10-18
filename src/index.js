@@ -10,7 +10,7 @@ registerBlockType('goodmotion/block-gm-contact-form', {
     'gm-contact-form',
   ),
   icon: 'email',
-  category: 'goodmotion-blocks',
+  category: 'theme',
   example: {},
   attributes: {},
   edit: (props) => {
