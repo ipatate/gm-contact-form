@@ -19,7 +19,14 @@ function form_callback(\WP_REST_Request $request)
   }
 
   $email = sanitize_email($request->get_param('email'));
-  $name = sanitize_text_field($request->get_param('name'));
+  $title = sanitize_text_field($request->get_param('title'));
+  $firstname = sanitize_text_field($request->get_param('firstname'));
+  $lastname = sanitize_text_field($request->get_param('lastname'));
+  $society = sanitize_text_field($request->get_param('society'));
+  $phone = sanitize_text_field($request->get_param('phone'));
+  $street = sanitize_text_field($request->get_param('street'));
+  $zipcode = sanitize_text_field($request->get_param('zipcode'));
+  $city = sanitize_text_field($request->get_param('city'));
   $message = sanitize_text_field($request->get_param('message'));
 
   // save in db
@@ -36,8 +43,15 @@ function form_callback(\WP_REST_Request $request)
       'message' => 'ERROR'
     ];
   }
-  // save name
-  add_post_meta($post_id, 'name', $name);
+  // save meta
+  add_post_meta($post_id, 'title', $title);
+  add_post_meta($post_id, 'firstname', $firstname);
+  add_post_meta($post_id, 'lastname', $lastname);
+  add_post_meta($post_id, 'society', $society);
+  add_post_meta($post_id, 'phone', $phone);
+  add_post_meta($post_id, 'street', $street);
+  add_post_meta($post_id, 'zipcode', $zipcode);
+  add_post_meta($post_id, 'city', $city);
 
   // email
   $from = get_option('gm_smtp_from');
@@ -53,8 +67,20 @@ function form_callback(\WP_REST_Request $request)
     $subject = __('Contact message from ', 'gm-contact-form') . get_option('blogname');
 
     // message html
-    $message = "<ul><li><strong>" . __('Date', 'gm-contact-form') . ":</strong><br /> "  . date('D j M à H:i') . "<br /></li><li><strong>" . __('Email', 'gm-contact-form') . ":</strong><br /> <a href=\"mailto:" . $email . "\">" . $email . "</a><br /></li>
-  <li><strong>" . __('Name', 'gm-contact-form') . ":</strong><br /> "  . $name . "<br /></li><li><strong>" . __('Message', 'gm-contact-form') . ":</strong><br /> "  . $message . "<br /></li></ul>";
+    $message = "<ul>"
+      . "<li><strong>" . __('Date', 'gm-contact-form') . ":</strong><br /> "
+      . date('D j M à H:i') . "<br /></li>"
+      . "<li><strong>" . __('Email', 'gm-contact-form') . ":</strong><br /> <a href=\"mailto:" . $email . "\">" . $email . "</a><br /></li>"
+      . "<li><strong>" . __('Phone', 'gm-contact-form') . ":</strong><br /> "  . $phone . "<br /></li>"
+      . "<li><strong>" . __('Title', 'gm-contact-form') . ":</strong><br /> "  . $title . "<br /></li>"
+      . "<li><strong>" . __('Lastname', 'gm-contact-form') . ":</strong><br /> "  . $lastname . "<br /></li>"
+      . "<li><strong>" . __('Firstname', 'gm-contact-form') . ":</strong><br /> "  . $firstname . "<br /></li>"
+      . ($society !== '' ? "<li><strong>" . __('Society', 'gm-contact-form') . ":</strong><br /> "  . $society . "<br /></li>" : '')
+      . "<li><strong>" . __('street', 'gm-contact-form') . ":</strong><br /> "  . $street . "<br /></li>"
+      . "<li><strong>" . __('Zipcode', 'gm-contact-form') . ":</strong><br /> "  . $zipcode . "<br /></li>"
+      . "<li><strong>" . __('City', 'gm-contact-form') . ":</strong><br /> "  . $city . "<br /></li>"
+      . "<li><strong>" . __('Message', 'gm-contact-form') . ":</strong><br /> "  . $message . "<br /></li>"
+      . "</ul>";
 
     // send email
     $b = wp_mail(

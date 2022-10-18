@@ -20,7 +20,6 @@ namespace GMContactForm;
 require_once(dirname(__FILE__) . '/includes/form.php');
 require_once(dirname(__FILE__) . '/includes/custom_post.php');
 require_once(dirname(__FILE__) . '/includes/token.php');
-require_once(dirname(__FILE__) . '/includes/render_callback.php');
 
 
 $PLUGIN_NAME = 'gm-contact-form';
@@ -50,16 +49,19 @@ function set_script_translations()
 add_action('init', __NAMESPACE__ . '\load_textdomain');
 add_action('init', __NAMESPACE__ . '\set_script_translations');
 
+
+
 /**
- * block registration
+ * render form
  */
-function block_init()
+function render_callback($attributes, $content)
 {
-  register_block_type_from_metadata(__DIR__, [
-    "render_callback" => __NAMESPACE__ . '\includes\renderCallback\render_callback',
-  ]);
+  $token = \GMContactForm\includes\token\getToken();
+  ob_start();
+  require plugin_dir_path(__FILE__) . 'build/template.php';
+  return ob_get_clean();
 }
-add_action('init', __NAMESPACE__ . '\block_init');
+
 
 
 /**
@@ -103,3 +105,14 @@ add_action('wp_enqueue_scripts', function () use ($PLUGIN_NAME, $VERSION) {
     wp_enqueue_script($PLUGIN_NAME, $path . '/assets/scripts.js', array(), $VERSION, true);
   }
 });
+
+/**
+ * block registration
+ */
+function block_init()
+{
+  register_block_type_from_metadata(__DIR__, [
+    "render_callback" => __NAMESPACE__ . '\render_callback',
+  ]);
+}
+add_action('init', __NAMESPACE__ . '\block_init');

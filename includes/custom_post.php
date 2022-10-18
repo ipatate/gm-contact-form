@@ -35,21 +35,7 @@ add_action('admin_head', __NAMESPACE__ . '\custom_css');
 function metaBox()
 {
   global $post;
-  echo "<div class=\"gm-contact-details\"><ul><li><strong>" . __('Date', 'gm-contact-form') . ":</strong> "  . get_the_date('D j M à H:i') . "</li><li><strong>" . __('Email', 'gm-contact-form') . ":</strong> <a href=\"mailto:" . $post->post_title . "\">" . $post->post_title . "</a></li>
-  <li><strong>" . __('Name', 'gm-contact-form') . ":</strong> "  . get_post_meta($post->ID, 'name', true) . "</li><li><strong>" . __('Message', 'gm-contact-form') . ":</strong> "  . $post->post_content . "</li></ul></div>
-    <style>#publishing-action, #misc-publishing-actions, .postbox-header, #postbox-container-1 {
-      display: none;
-    }
-    .gm-contact-details li {
-      margin: 1rem 0;
-    }
-    .gm-contact-details strong {
-      text-decoration: underline;
-      display: block;
-      margin-bottom: .5rem;
-    }
-
-  ";
+  require plugin_dir_path(dirname(__FILE__)) . 'build/metabox.php';
 }
 
 /**
@@ -128,7 +114,8 @@ function set_custom_edit_columns($columns)
   unset($columns['date']);
   return array_merge($columns, array(
     'title' => __('Email', 'gm-contact-form'),
-    'name' => __('Name', 'gm-contact-form'),
+    'firstname' => __('Firstname', 'gm-contact-form'),
+    'lastname' => __('Lastname', 'gm-contact-form'),
     'message' => __('Message', 'gm-contact-form'),
     'date_send' => __('Date', 'gm-contact-form'),
   ));
@@ -143,8 +130,11 @@ add_filter('manage_gm-contacts_posts_columns',  __NAMESPACE__ . '\set_custom_edi
 function custom_column($column, $post_id)
 {
   switch ($column) {
-    case 'name':
-      echo get_post_meta($post_id, 'name', true);
+    case 'lastname':
+      echo get_post_meta($post_id, 'lastname', true);
+      break;
+    case 'firstname':
+      echo get_post_meta($post_id, 'firstname', true);
       break;
     case 'date_send':
       echo get_the_date('D j M à H:i');

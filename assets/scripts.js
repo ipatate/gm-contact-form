@@ -51,6 +51,28 @@ document.addEventListener('DOMContentLoaded', function () {
     tokenRequest.send()
   })
 
+  // error input
+  var inputs = document.querySelectorAll(
+    '#gm-contact-form input, #gm-contact-form textarea',
+  )
+  inputs.forEach((input) => {
+    input.addEventListener(
+      'invalid',
+      (event) => {
+        console.log(input)
+        input.classList.add('error')
+      },
+      false,
+    )
+    input.addEventListener(
+      'valid',
+      (event) => {
+        input.classList.remove('error')
+      },
+      false,
+    )
+  })
+
   // send form
   form.addEventListener('submit', function (e) {
     e.preventDefault()
