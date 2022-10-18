@@ -1,0 +1,13 @@
+{
+  "apiVersion": 2,
+  "name": "goodmotion/block-gm-contact-form",
+  "title": "GM Contact Form",
+  "category": "goodmotion-blocks",
+  "icon": "columns",
+  "description": "Block for display contact form",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "gm-contact-form",
+  "editorScript": "file:./build/index.js"
+}
