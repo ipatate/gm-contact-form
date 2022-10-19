@@ -18,13 +18,16 @@ namespace GMContactForm;
  */
 
 require_once(dirname(__FILE__) . '/includes/form.php');
-require_once(dirname(__FILE__) . '/includes/custom_post.php');
+require_once(dirname(__FILE__) . '/includes/custom-post.php');
 require_once(dirname(__FILE__) . '/includes/token.php');
+require_once(dirname(__FILE__) . '/includes/options.php');
 
 
 $PLUGIN_NAME = 'gm-contact-form';
 $VERSION = '0.0.1';
 
+// options page
+new includes\options\SettingsPage();
 
 /**
  * Load the plugin text domain for translation.

@@ -54,8 +54,8 @@ function form_callback(\WP_REST_Request $request)
   add_post_meta($post_id, 'city', $city);
 
   // email
-  $from = get_option('gm_smtp_from');
-  $fromName = get_option('gm_smtp_from_name');
+  $from = get_option('gm_smtp_from') ?? get_option('admin_email');
+  $fromName = get_option('gm_smtp_from_name') ?? get_option('admin_email');
   if ($from) {
     // create header
     $headers[] = 'From: ' . $fromName . ' <' . $from . '>';
