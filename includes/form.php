@@ -54,8 +54,8 @@ function form_callback(\WP_REST_Request $request)
   add_post_meta($post_id, 'city', $city);
 
   // email
-  $from = get_option('gm_smtp_from') ?? get_option('admin_email');
-  $fromName = get_option('gm_smtp_from_name') ?? get_option('admin_email');
+  $from = get_option('gm-contact-from') ?? get_option('admin_email');
+  $fromName = get_option('gm-contact-from-name') ?? get_option('admin_email');
   if ($from) {
     // create header
     $headers[] = 'From: ' . $fromName . ' <' . $from . '>';
@@ -96,11 +96,15 @@ function form_callback(\WP_REST_Request $request)
         'message' => 'ERROR'
       ];
     }
+    // ok :)
+    return [
+      'error' => false,
+      'message' => 'EMAIL_SEND'
+    ];
   }
-  // ok :)
   return [
-    'error' => false,
-    'message' => 'EMAIL_SEND'
+    'error' => true,
+    'message' => 'ERROR'
   ];
 }
 

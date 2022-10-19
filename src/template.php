@@ -1,6 +1,6 @@
 <script type="text/javascript">
   var gmContactFormSuccessMessage = '<?php echo __("The message was sent successfully.Thank you ", "gm-contact-form")  ?> ';
-  var gmContactFormErrorMessage = '<?php echo __("Oh! An error occurred while processing your request😱", "gm-contact-form ")  ?> ';
+  var gmContactFormErrorMessage = '<?php echo __("Oh! An error occurred while processing your request😱", "gm-contact-form")  ?> ';
 </script>
 <div class="gm-contact-form">
   <form action="#" id="gm-contact-form">

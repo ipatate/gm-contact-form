@@ -5,10 +5,7 @@ import { useBlockProps } from '@wordpress/block-editor'
 
 registerBlockType('goodmotion/block-gm-contact-form', {
   title: __('GM Contact Form', 'gm-contact-form'),
-  description: __(
-    'Block for display contact form subscription',
-    'gm-contact-form',
-  ),
+  description: __('Block for display contact form contact', 'gm-contact-form'),
   icon: 'email',
   category: 'theme',
   example: {},

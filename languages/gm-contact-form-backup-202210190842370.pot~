@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GM Contact Form\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-19 08:42+0000\n"
+"POT-Creation-Date: 2022-10-18 15:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,15 +16,15 @@ msgstr ""
 "X-Loco-Version: 2.6.2; wp-6.1-RC1\n"
 "X-Domain: gm-contact-form"
 
-#: build/template.php:64 src/template.php:64
+#: build/template.php:63 src/template.php:63
 msgid " Send"
 msgstr ""
 
-#: includes/custom-post.php:49
+#: includes/custom_post.php:49
 msgid "Add"
 msgstr ""
 
-#: includes/custom-post.php:50
+#: includes/custom_post.php:50
 msgid "Add new Contact"
 msgstr ""
 
@@ -33,7 +33,7 @@ msgstr ""
 msgid "City"
 msgstr ""
 
-#: includes/custom-post.php:48 includes/custom-post.php:51
+#: includes/custom_post.php:48 includes/custom_post.php:51
 msgid "Contact"
 msgstr ""
 
@@ -41,11 +41,11 @@ msgstr ""
 msgid "Contact message from "
 msgstr ""
 
-#: includes/custom-post.php:47 includes/custom-post.php:58
+#: includes/custom_post.php:47 includes/custom_post.php:58
 msgid "Contacts"
 msgstr ""
 
-#: includes/custom-post.php:120 includes/form.php:71 build/metabox.php:3
+#: includes/form.php:71 includes/custom_post.php:119 build/metabox.php:3
 #: src/metabox.php:3
 msgid "Date"
 msgstr ""
@@ -54,7 +54,7 @@ msgstr ""
 msgid "Don't check this box, it's for robot"
 msgstr ""
 
-#: includes/custom-post.php:116 includes/form.php:73 build/metabox.php:5
+#: includes/form.php:73 includes/custom_post.php:116 build/metabox.php:5
 #: build/template.php:31 src/metabox.php:5 src/template.php:31
 msgid "Email"
 msgstr ""
@@ -63,12 +63,12 @@ msgstr ""
 msgid "Faramaz Patrick <infos@goodmotion.fr>"
 msgstr ""
 
-#: build/template.php:66 src/template.php:66
+#: build/template.php:64 src/template.php:64
 msgid "field required"
 msgstr ""
 
-#: includes/custom-post.php:117 includes/form.php:77 build/metabox.php:12
-#: build/template.php:15 src/metabox.php:12 src/template.php:15
+#: includes/form.php:77 build/metabox.php:12 build/template.php:15
+#: src/metabox.php:12 src/template.php:15
 msgid "Firstname"
 msgstr ""
 
@@ -76,7 +76,7 @@ msgstr ""
 msgid "GM Contact Form"
 msgstr ""
 
-#: includes/custom-post.php:118 includes/form.php:76 build/metabox.php:14
+#: includes/form.php:76 includes/custom_post.php:117 build/metabox.php:14
 #: build/template.php:19 src/metabox.php:14 src/template.php:19
 msgid "Lastname"
 msgstr ""
@@ -85,7 +85,7 @@ msgstr ""
 msgid "M"
 msgstr ""
 
-#: includes/custom-post.php:119 includes/form.php:82 build/metabox.php:24
+#: includes/form.php:82 includes/custom_post.php:118 build/metabox.php:24
 #: build/template.php:57 src/metabox.php:24 src/template.php:57
 msgid "Message"
 msgstr ""
@@ -94,23 +94,19 @@ msgstr ""
 msgid "Ms"
 msgstr ""
 
-#: includes/custom-post.php:52
+#: includes/custom_post.php:52
 msgid "New Contact"
 msgstr ""
 
-#: includes/custom-post.php:55
+#: includes/custom_post.php:55
 msgid "No Contact found"
 msgstr ""
 
-#: includes/custom-post.php:56
+#: includes/custom_post.php:56
 msgid "No Contact in trash"
 msgstr ""
 
-#: src/template.php:3
-msgid "Oh! An error occurred while processing your request😱"
-msgstr ""
-
-#: includes/custom-post.php:57
+#: includes/custom_post.php:57
 msgid "Parent Contact:"
 msgstr ""
 
@@ -119,11 +115,11 @@ msgstr ""
 msgid "Phone"
 msgstr ""
 
-#: includes/custom-post.php:54
+#: includes/custom_post.php:54
 msgid "Search Contact"
 msgstr ""
 
-#: includes/custom-post.php:53
+#: includes/custom_post.php:53
 msgid "See the Contact"
 msgstr ""
 
