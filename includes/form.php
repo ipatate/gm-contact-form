@@ -72,13 +72,9 @@ function form_callback(\WP_REST_Request $request)
       . date('D j M à H:i') . "<br /></li>"
       . "<li><strong>" . __('Email', 'gm-contact-form') . ":</strong><br /> <a href=\"mailto:" . $email . "\">" . $email . "</a><br /></li>"
       . "<li><strong>" . __('Phone', 'gm-contact-form') . ":</strong><br /> "  . $phone . "<br /></li>"
-      . "<li><strong>" . __('Title', 'gm-contact-form') . ":</strong><br /> "  . $title . "<br /></li>"
-      . "<li><strong>" . __('Lastname', 'gm-contact-form') . ":</strong><br /> "  . $lastname . "<br /></li>"
-      . "<li><strong>" . __('Firstname', 'gm-contact-form') . ":</strong><br /> "  . $firstname . "<br /></li>"
+      . "<li><strong>" . __('Name', 'gm-contact-form') . ":</strong> "  . $title . " "  . $lastname . " "  . $firstname . "<br /></li>"
       . ($society !== '' ? "<li><strong>" . __('Society', 'gm-contact-form') . ":</strong><br /> "  . $society . "<br /></li>" : '')
-      . "<li><strong>" . __('street', 'gm-contact-form') . ":</strong><br /> "  . $street . "<br /></li>"
-      . "<li><strong>" . __('Zipcode', 'gm-contact-form') . ":</strong><br /> "  . $zipcode . "<br /></li>"
-      . "<li><strong>" . __('City', 'gm-contact-form') . ":</strong><br /> "  . $city . "<br /></li>"
+      . "<li><strong>" . __('Address', 'gm-contact-form') . ":</strong><br /> "  . $street . "<br />"  . $zipcode . " "  . $city . "<br /></li>"
       . "<li><strong>" . __('Message', 'gm-contact-form') . ":</strong><br /> "  . $message . "<br /></li>"
       . "</ul>";
 

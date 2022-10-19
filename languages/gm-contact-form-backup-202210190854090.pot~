@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GM Contact Form\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-19 08:54+0000\n"
+"POT-Creation-Date: 2022-10-19 08:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -28,12 +28,8 @@ msgstr ""
 msgid "Add new Contact"
 msgstr ""
 
-#: includes/form.php:77
-msgid "Address"
-msgstr ""
-
-#: build/metabox.php:22 build/template.php:51 src/metabox.php:22
-#: src/template.php:51
+#: includes/form.php:81 build/metabox.php:22 build/template.php:51
+#: src/metabox.php:22 src/template.php:51
 msgid "City"
 msgstr ""
 
@@ -71,8 +67,8 @@ msgstr ""
 msgid "field required"
 msgstr ""
 
-#: includes/custom-post.php:117 build/metabox.php:12 build/template.php:15
-#: src/metabox.php:12 src/template.php:15
+#: includes/custom-post.php:117 includes/form.php:77 build/metabox.php:12
+#: build/template.php:15 src/metabox.php:12 src/template.php:15
 msgid "Firstname"
 msgstr ""
 
@@ -80,8 +76,8 @@ msgstr ""
 msgid "GM Contact Form"
 msgstr ""
 
-#: includes/custom-post.php:118 build/metabox.php:14 build/template.php:19
-#: src/metabox.php:14 src/template.php:19
+#: includes/custom-post.php:118 includes/form.php:76 build/metabox.php:14
+#: build/template.php:19 src/metabox.php:14 src/template.php:19
 msgid "Lastname"
 msgstr ""
 
@@ -89,17 +85,13 @@ msgstr ""
 msgid "M"
 msgstr ""
 
-#: includes/custom-post.php:119 includes/form.php:78 build/metabox.php:24
+#: includes/custom-post.php:119 includes/form.php:82 build/metabox.php:24
 #: build/template.php:57 src/metabox.php:24 src/template.php:57
 msgid "Message"
 msgstr ""
 
 #: build/template.php:9 src/template.php:9
 msgid "Ms"
-msgstr ""
-
-#: includes/form.php:75
-msgid "Name"
 msgstr ""
 
 #: includes/custom-post.php:52
@@ -114,7 +106,7 @@ msgstr ""
 msgid "No Contact in trash"
 msgstr ""
 
-#: build/template.php:3 src/template.php:3
+#: src/template.php:3
 msgid "Oh! An error occurred while processing your request😱"
 msgstr ""
 
@@ -135,7 +127,7 @@ msgstr ""
 msgid "See the Contact"
 msgstr ""
 
-#: includes/form.php:76 build/metabox.php:16 build/template.php:25
+#: includes/form.php:78 build/metabox.php:16 build/template.php:25
 #: src/metabox.php:16 src/template.php:25
 msgid "Society"
 msgstr ""
@@ -143,6 +135,10 @@ msgstr ""
 #: build/metabox.php:18 build/template.php:41 src/metabox.php:18
 #: src/template.php:41
 msgid "Street"
+msgstr ""
+
+#: includes/form.php:79
+msgid "street"
 msgstr ""
 
 #: build/template.php:2 src/template.php:2
@@ -154,7 +150,7 @@ msgid ""
 "This plugin allows you to display a Block for contact form subscription."
 msgstr ""
 
-#: build/metabox.php:10 src/metabox.php:10
+#: includes/form.php:75 build/metabox.php:10 src/metabox.php:10
 msgid "Title"
 msgstr ""
 
@@ -162,6 +158,6 @@ msgstr ""
 msgid "ZipCode"
 msgstr ""
 
-#: build/metabox.php:20 src/metabox.php:20
+#: includes/form.php:80 build/metabox.php:20 src/metabox.php:20
 msgid "Zipcode"
 msgstr ""
